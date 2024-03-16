@@ -8,7 +8,7 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 // import './example_app.dart';
 import './firebase_options.dart';
 
-const becauseColor = Color.fromARGB(255, 148, 221, 219);
+const becauseColor = Color.fromRGBO(91, 198, 194, 1);
 
 const title = Row(
   mainAxisAlignment: MainAxisAlignment.center,
