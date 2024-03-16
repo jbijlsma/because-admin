@@ -39,6 +39,8 @@ dependencies:
   cloud_firestore: ^4.15.8
   firebase_storage: ^11.6.9
   url_launcher: ^6.2.5
+  searchable_listview: ^2.10.2
+  firebase_ui_auth: ^1.13.1
 
 dev_dependencies:
   flutter_test:
