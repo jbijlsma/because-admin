@@ -66,7 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
             stream:
                 FirebaseFirestore.instance.collection('waivers').snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return const CircularProgressIndicator();
+              if (!snapshot.hasData) {
+                return const Center(child: CircularProgressIndicator());
+              }
 
               var filteredItems = snapshot.data!.docs;
               var filteredItemCount = filteredItems.length;
