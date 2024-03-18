@@ -71,14 +71,17 @@ class MyApp extends StatelessWidget {
               title: title,
               actions: [
                 IconButton(
-                    icon: const Icon(
-                      Icons.logout,
-                      color: Colors.white,
-                    ),
-                    onPressed: () async {
-                      await FirebaseAuth.instance.signOut();
-                      Navigator.pushReplacementNamed(context, '/sign-in');
-                    })
+                  icon: const Icon(
+                    Icons.logout,
+                    color: Colors.white,
+                  ),
+                  onPressed: () async {
+                    await FirebaseAuth.instance.signOut();
+
+                    if (!context.mounted) return;
+                    Navigator.of(context).pushReplacementNamed('/sign-in');
+                  },
+                )
               ],
             ),
             body: const MyHomePage(),
